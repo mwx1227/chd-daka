@@ -141,7 +141,8 @@ def task(username, password, address, position, wxkey):
     
     driver.quit() 
     # 推送
-    push(text, output_data, wxkey)
+    if wxkey != '':
+        push(text, output_data, wxkey)
 def run():
     env_dist = os.environ
     position = dict({
